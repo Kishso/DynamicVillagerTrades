@@ -1,0 +1,38 @@
+{
+  "schemaVersion": 1,
+  "id": "dynamic_villager_trades",
+  "version": "${version}",
+  "name": "Dynamic Villager Trades",
+  "description": "This is an example description! Tell everyone what your mod is about!",
+  "authors": [
+    "Me!"
+  ],
+  "contact": {
+    "homepage": "https://fabricmc.net/",
+    "sources": "https://github.com/FabricMC/fabric-example-mod"
+  },
+  "license": "CC0-1.0",
+  "icon": "assets/dynamic_villager_trades/icon.png",
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "com.kishso.fabric.DynamicVillagerTradesModImpl"
+    ],
+    "client": [
+      "com.kishso.fabric.client.ExampleModFabricClient"
+    ]
+  },
+  "mixins": [
+    "dynamic_villager_trades.mixins.json"
+  ],
+  "depends": {
+    "fabricloader": ">=0.16.10",
+    "minecraft": "~1.21.4",
+    "java": ">=21",
+    "architectury": ">=15.0.1",
+    "fabric-api": "*"
+  },
+  "suggests": {
+    "another-mod": "*"
+  }
+}

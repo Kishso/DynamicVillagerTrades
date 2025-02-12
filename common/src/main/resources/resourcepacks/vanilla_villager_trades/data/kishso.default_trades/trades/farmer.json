@@ -1,0 +1,21 @@
+{
+  "tier" :
+  {
+    "level" : "novice",
+    "trades" :
+    [
+      {
+        "offer" :
+        {
+          "item": "minecraft:wheat",
+          "count" : { "min" : 20, "max": 32}
+        },
+        "wants" :
+        {
+          "item" : "minecraft:emerald",
+          "count" : {"abs" :  1}
+        }
+      }
+    ]
+  }
+}

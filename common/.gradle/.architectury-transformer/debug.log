@@ -1,0 +1,21 @@
+[Architectury Transformer DEBUG] 
+[Architectury Transformer DEBUG] ============================
+[Architectury Transformer DEBUG] Transforming from C:\Users\kipcl\src\MinecraftMods\dynamic_villager_trades\common\build\devlibs\dynamic_villager_trades-common-1.0.0-dev.jar to C:\Users\kipcl\src\MinecraftMods\dynamic_villager_trades\common\build\libs\dynamic_villager_trades-common-1.0.0-transformProductionFabric.jar
+[Architectury Transformer DEBUG] ============================
+[Architectury Transformer DEBUG] 
+[Architectury Transformer DEBUG] Transforming 5 transformer(s) from C:\Users\kipcl\src\MinecraftMods\dynamic_villager_trades\common\build\devlibs\dynamic_villager_trades-common-1.0.0-dev.jar to C:\Users\kipcl\src\MinecraftMods\dynamic_villager_trades\common\build\libs\dynamic_villager_trades-common-1.0.0-transformProductionFabric.jar: 
+[Architectury Transformer DEBUG]  - dev.architectury.transformer.transformers.RemapMixinVariables@2bf285e8
+[Architectury Transformer DEBUG]  - dev.architectury.transformer.transformers.TransformExpectPlatform@6d2368ab
+[Architectury Transformer DEBUG]  - dev.architectury.transformer.transformers.RemapInjectables@7798e4b5
+[Architectury Transformer DEBUG]  - AddRefmapName(enabled=() -> kotlin.Boolean)
+[Architectury Transformer DEBUG]  - dev.architectury.transformer.transformers.TransformPlatformOnly@609c85bb
+[Architectury Transformer DEBUG] Transforming from C:\Users\kipcl\src\MinecraftMods\dynamic_villager_trades\common\build\devlibs\dynamic_villager_trades-common-1.0.0-dev.jar to C:\Users\kipcl\src\MinecraftMods\dynamic_villager_trades\common\build\libs\dynamic_villager_trades-common-1.0.0-transformProductionFabric.jar with 5 transformer(s) on dev.architectury.transformer.handler.SimpleTransformerHandler
+[Architectury Transformer DEBUG] Found class transformer
+[Architectury Transformer DEBUG] Writing com/kishso/VillagerTradesReloadListener with maxs=true frames=true
+[Architectury Transformer DEBUG] Writing com/kishso/VillagerTradesReloadListener$1 with maxs=true frames=true
+[Architectury Transformer DEBUG] Writing com/kishso/DynamicVillagerTradesMod with maxs=true frames=true
+[Architectury Transformer DEBUG] Checking whether /dynamic_villager_trades.mixins.json is a mixin config.
+[Architectury Transformer DEBUG] Found mixin config(s): /dynamic_villager_trades.mixins.json
+[Architectury Transformer DEBUG] Injecting dynamic_villager_trades-common-common-refmap.json to /dynamic_villager_trades.mixins.json
+[Architectury Transformer DEBUG] Closed File Systems for C:\Users\kipcl\src\MinecraftMods\dynamic_villager_trades\common\build\libs\dynamic_villager_trades-common-1.0.0-transformProductionFabric.jar
+[Architectury Transformer] Transformed jar with 5 transformer(s) in 33.58 ms

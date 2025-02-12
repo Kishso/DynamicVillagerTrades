@@ -1,0 +1,128 @@
+---- Minecraft Crash Report ----
+// This doesn't make any sense!
+
+Time: 2025-02-09 13:45:27
+Description: Mod loading failures have occurred; consult the issue messages for more details
+
+net.neoforged.neoforge.logging.CrashReportExtender$ModLoadingCrashException: Mod loading has failed
+
+
+A detailed walkthrough of the error, its code path and all known details is as follows:
+---------------------------------------------------------------------------------------
+
+-- Head --
+Thread: Render thread
+Stacktrace:
+	at TRANSFORMER/neoforge@21.4.9-beta/net.neoforged.neoforge.common.NeoForge.lambda$static$0(NeoForge.java:19) ~[neoforge-21.4.9-beta-minecraft-merged-1.21.4-loom.mappings.1_21_4.layered+hash.40359-v2-neoforge-21.4.9-beta.jar%23225!/:?] {re:classloading}
+-- Mod loading issue for: dynamic_villager_trades --
+Details:
+	Caused by 0: java.lang.IllegalArgumentException: Method public void com.kishso.neoforge.DynamicVillagerTradesModImpl.onAddPackFinders(net.neoforged.neoforge.event.AddPackFindersEvent) has @SubscribeEvent annotation, but takes an argument that is not valid for this busclass net.neoforged.neoforge.event.AddPackFindersEvent
+		at MC-BOOTSTRAP/net.neoforged.bus/net.neoforged.bus.EventBus.registerListener(EventBus.java:164) ~[bus-8.0.2.jar%23127!/:?] {}
+		at MC-BOOTSTRAP/net.neoforged.bus/net.neoforged.bus.EventBus.register(EventBus.java:91) ~[bus-8.0.2.jar%23127!/:?] {}
+		at TRANSFORMER/dynamic_villager_trades@1.0.0/com.kishso.neoforge.DynamicVillagerTradesModImpl.<init>(DynamicVillagerTradesModImpl.java:28) ~[%23226!/:?] {re:classloading}
+		at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62) ~[?:?] {}
+		at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502) ~[?:?] {}
+		at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486) ~[?:?] {}
+		at MC-BOOTSTRAP/fml_loader@6.0.4/net.neoforged.fml.javafmlmod.FMLModContainer.constructMod(FMLModContainer.java:115) ~[loader-6.0.4.jar%23124!/:6.0] {}
+		at MC-BOOTSTRAP/fml_loader@6.0.4/net.neoforged.fml.ModLoader.lambda$constructMods$3(ModLoader.java:153) ~[loader-6.0.4.jar%23124!/:6.0] {}
+		at MC-BOOTSTRAP/fml_loader@6.0.4/net.neoforged.fml.ModLoader.lambda$dispatchParallelTask$7(ModLoader.java:231) ~[loader-6.0.4.jar%23124!/:6.0] {}
+		at java.base/java.util.concurrent.CompletableFuture.uniHandle(CompletableFuture.java:934) ~[?:?] {}
+		at java.base/java.util.concurrent.CompletableFuture$UniHandle.tryFire(CompletableFuture.java:911) ~[?:?] {}
+		at java.base/java.util.concurrent.CompletableFuture$Completion.exec(CompletableFuture.java:483) ~[?:?] {}
+		at java.base/java.util.concurrent.ForkJoinTask.doExec$$$capture(ForkJoinTask.java:387) ~[?:?] {}
+		at java.base/java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java) ~[?:?] {}
+		at java.base/java.util.concurrent.ForkJoinPool$WorkQueue.topLevelExec(ForkJoinPool.java:1312) ~[?:?] {}
+		at java.base/java.util.concurrent.ForkJoinPool.scan(ForkJoinPool.java:1843) ~[?:?] {re:computing_frames}
+		at java.base/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1808) ~[?:?] {re:computing_frames}
+		at java.base/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:188) ~[?:?] {}
+
+	Mod file: /C:/Users/kipcl/src/MinecraftMods/dynamic_villager_trades/neoforge/build/resources/main/
+	Failure message: Dynamic Villager Trades (dynamic_villager_trades) has failed to load correctly
+		java.lang.IllegalArgumentException: Method public void com.kishso.neoforge.DynamicVillagerTradesModImpl.onAddPackFinders(net.neoforged.neoforge.event.AddPackFindersEvent) has @SubscribeEvent annotation, but takes an argument that is not valid for this busclass net.neoforged.neoforge.event.AddPackFindersEvent
+	Mod version: 1.0.0
+	Mod issues URL: <No issues URL found>
+	Exception message: java.lang.IllegalArgumentException: IModBusEvent events are not allowed on the common NeoForge bus! Use a mod bus instead.
+Stacktrace:
+	at TRANSFORMER/neoforge@21.4.9-beta/net.neoforged.neoforge.common.NeoForge.lambda$static$0(NeoForge.java:19) ~[neoforge-21.4.9-beta-minecraft-merged-1.21.4-loom.mappings.1_21_4.layered+hash.40359-v2-neoforge-21.4.9-beta.jar%23225!/:?] {re:classloading}
+	at MC-BOOTSTRAP/net.neoforged.bus/net.neoforged.bus.EventBus.registerListener(EventBus.java:162) ~[bus-8.0.2.jar%23127!/:?] {}
+	at MC-BOOTSTRAP/net.neoforged.bus/net.neoforged.bus.EventBus.register(EventBus.java:91) ~[bus-8.0.2.jar%23127!/:?] {}
+	at TRANSFORMER/dynamic_villager_trades@1.0.0/com.kishso.neoforge.DynamicVillagerTradesModImpl.<init>(DynamicVillagerTradesModImpl.java:28) ~[%23226!/:?] {re:classloading}
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62) ~[?:?] {}
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502) ~[?:?] {}
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486) ~[?:?] {}
+	at MC-BOOTSTRAP/fml_loader@6.0.4/net.neoforged.fml.javafmlmod.FMLModContainer.constructMod(FMLModContainer.java:115) ~[loader-6.0.4.jar%23124!/:6.0] {}
+	at MC-BOOTSTRAP/fml_loader@6.0.4/net.neoforged.fml.ModLoader.lambda$constructMods$3(ModLoader.java:153) ~[loader-6.0.4.jar%23124!/:6.0] {}
+	at MC-BOOTSTRAP/fml_loader@6.0.4/net.neoforged.fml.ModLoader.lambda$dispatchParallelTask$7(ModLoader.java:231) ~[loader-6.0.4.jar%23124!/:6.0] {}
+	at java.base/java.util.concurrent.CompletableFuture.uniHandle(CompletableFuture.java:934) ~[?:?] {}
+	at java.base/java.util.concurrent.CompletableFuture$UniHandle.tryFire(CompletableFuture.java:911) ~[?:?] {}
+	at java.base/java.util.concurrent.CompletableFuture$Completion.exec(CompletableFuture.java:483) ~[?:?] {}
+	at java.base/java.util.concurrent.ForkJoinTask.doExec$$$capture(ForkJoinTask.java:387) ~[?:?] {}
+	at java.base/java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java) ~[?:?] {}
+	at java.base/java.util.concurrent.ForkJoinPool$WorkQueue.topLevelExec(ForkJoinPool.java:1312) ~[?:?] {}
+	at java.base/java.util.concurrent.ForkJoinPool.scan(ForkJoinPool.java:1843) ~[?:?] {re:computing_frames}
+	at java.base/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1808) ~[?:?] {re:computing_frames}
+	at java.base/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:188) ~[?:?] {}
+
+
+-- System Details --
+Details:
+	Minecraft Version: 1.21.4
+	Minecraft Version ID: 1.21.4
+	Operating System: Windows 11 (amd64) version 10.0
+	Java Version: 21.0.3, Oracle Corporation
+	Java VM Version: Java HotSpot(TM) 64-Bit Server VM (mixed mode, sharing), Oracle Corporation
+	Memory: 161658856 bytes (154 MiB) / 1916796928 bytes (1828 MiB) up to 8522825728 bytes (8128 MiB)
+	CPUs: 24
+	Processor Vendor: GenuineIntel
+	Processor Name: 12th Gen Intel(R) Core(TM) i9-12900K
+	Identifier: Intel64 Family 6 Model 151 Stepping 2
+	Microarchitecture: Alder Lake
+	Frequency (GHz): 3.19
+	Number of physical packages: 1
+	Number of physical CPUs: 16
+	Number of logical CPUs: 24
+	Graphics card #0 name: NVIDIA GeForce RTX 4060 Ti
+	Graphics card #0 vendor: NVIDIA
+	Graphics card #0 VRAM (MiB): 8188.00
+	Graphics card #0 deviceId: VideoController1
+	Graphics card #0 versionInfo: 32.0.15.6094
+	Memory slot #0 capacity (MiB): 16384.00
+	Memory slot #0 clockSpeed (GHz): 6.00
+	Memory slot #0 type: DDR5
+	Memory slot #1 capacity (MiB): 16384.00
+	Memory slot #1 clockSpeed (GHz): 6.00
+	Memory slot #1 type: DDR5
+	Virtual memory max (MiB): 37373.39
+	Virtual memory used (MiB): 21737.95
+	Swap memory total (MiB): 4864.00
+	Swap memory used (MiB): 129.43
+	Space in storage for jna.tmpdir (MiB): <path not set>
+	Space in storage for org.lwjgl.system.SharedLibraryExtractPath (MiB): <path not set>
+	Space in storage for io.netty.native.workdir (MiB): <path not set>
+	Space in storage for java.io.tmpdir (MiB): available: 794678.06, total: 952983.00
+	Space in storage for workdir (MiB): available: 794678.06, total: 952983.00
+	JVM Flags: 0 total; 
+	ModLauncher: 11.0.4+main.d2e20e43
+	ModLauncher launch target: neoforgeclientdev
+	ModLauncher services: 
+		sponge-mixin-0.15.2+mixin.0.8.7.jar mixin PLUGINSERVICE 
+		loader-6.0.4.jar slf4jfixer PLUGINSERVICE 
+		loader-6.0.4.jar runtime_enum_extender PLUGINSERVICE 
+		unprotect-1.2.0.jar unprotect PLUGINSERVICE 
+		at-modlauncher-11.0.1.jar accesstransformer PLUGINSERVICE 
+		loader-6.0.4.jar runtimedistcleaner PLUGINSERVICE 
+		modlauncher-11.0.4.jar mixin TRANSFORMATIONSERVICE 
+		modlauncher-11.0.4.jar fml TRANSFORMATIONSERVICE 
+	FML Language Providers: 
+		javafml@6.0
+		lowcodefml@6.0
+		minecraft@6.0
+	Mod List: 
+		architectury-neoforge-15.0.1.jar                  |Architectury                  |architectury                  |15.0.1              |Manifest: NOSIGNATURE
+		main                                              |Dynamic Villager Trades       |dynamic_villager_trades       |1.0.0               |Manifest: NOSIGNATURE
+		18291167788937228564.jar                          |generated_9345dac             |generated_9345dac             |1                   |Manifest: NOSIGNATURE
+		neoforge-21.4.9-beta-minecraft-merged-1.21.4-loom.|Minecraft                     |minecraft                     |1.21.4              |Manifest: NOSIGNATURE
+		neoforge-21.4.9-beta-minecraft-merged-1.21.4-loom.|NeoForge                      |neoforge                      |21.4.9-beta         |Manifest: NOSIGNATURE
+	Crash Report UUID: 79470301-55a6-469a-8f26-b21aade0dfbf
+	FML: 6.0.4
+	NeoForge: 21.4.9-beta
