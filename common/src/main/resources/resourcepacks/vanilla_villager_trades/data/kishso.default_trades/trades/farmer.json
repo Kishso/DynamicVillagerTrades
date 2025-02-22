@@ -1,21 +1,32 @@
 {
-  "tier" :
-  {
-    "level" : "novice",
-    "trades" :
-    [
-      {
-        "offer" :
-        {
-          "item": "minecraft:wheat",
-          "count" : { "min" : 20, "max": 32}
-        },
-        "wants" :
-        {
-          "item" : "minecraft:emerald",
-          "count" : {"abs" :  1}
-        }
-      }
-    ]
-  }
+  "target_mob" : "minecraft:villager",
+  "types" : [
+    {
+      "type" : "novice",
+      "offers" :
+              [
+                {
+                  "want":
+                  {
+                    "itemId" : "minecraft:emerald",
+                    "min" : 5,
+                    "max" : 16
+                  },
+                  "offer":
+                  {
+                    "itemId" : "minecraft:dirt",
+                    "min" : 1,
+                    "max" : 1
+                  }
+                }
+              ]
+    },
+    {
+      "type" : "apprentice",
+      "offers" :
+              [
+
+              ]
+    }
+  ]
 }
